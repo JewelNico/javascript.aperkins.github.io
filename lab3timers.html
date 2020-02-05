@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+.newStyles{color:green;font-family:times new roman:font-size:20pt}
+</style>
+<h1 id= "a"> </h1>
+<script>
+
+function pickArray()
+{
+
+var colors = ["pink","blue", "red", "orange", "purple"];
+var quotes = ["I love you.", "I am happy.","I am hungry.", "I am sleepy.", "I am cold."];
+var index =  Math.floor(Math.random()*colors.length);
+var randColors = colors[index];
+var randQuotes = quotes[index];
+var colorText = document.getElementById("a");
+colorText.innerHTML= quotes[index]+ colors[index];
+colorText.style.color= randColors;
+
+}
+
+var timerID=setInterval(pickArray, 6000);
+</script>
+</head>
+<body>
+<p> Stuff goes here </p>  
+<p> More here </p>
+<p> Annnnnd more here </p>
+</body>
+<script>
+function getParagraphs ()
+
+{
+var myParagraphs= document.getElementsByTagName("p");
+
+for (i = 0; i< myParagraphs.length;i++)
+{
+myParagraphs[i].className="newStyles";
+}
+}
+var timerID=setTimeout(getParagraphs, 10000);
+</script>
+</html>
