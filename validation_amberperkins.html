@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<script>
+	
+</script>
+
+<body>
+<script>	
+
+	function validate(phoneNumber)
+		{
+			
+			var regExp = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+			var result = regExp.test(phoneNumber);
+			
+						
+			if(result)
+			{
+			}
+
+			else{
+			alert("Invaild. Please re-enter your number like this (xxx) xxx- xxxx");
+				prompt();
+			
+			}
+		
+		}	
+		
+		
+			var firstName = prompt("Enter your first name");	
+			var state = prompt("Enter your state of residence");
+			var phoneNumber = prompt("Enter your phone number like this (123)456-7890");
+			validate(phoneNumber);
+			
+				
+			
+			if(firstName == "" || state == "" || phoneNumber == "") 
+			{
+				alert("All fields must be completed.")
+			}	
+		
+		
+			if(state.toLowerCase() =="tx")
+			{
+				alert("Howdy" + " "  + firstName + "." + " " + "Thank you for providinig us with your data.") 
+			}
+			
+			else if(state !="TX")
+			{
+				alert("Hello" + " " +  firstName +"." + " " + "Thank you for providing us with your data.")
+			}
+			
+			
+		
+		
+
+	
+
+</script>
+</body>
+</html>
