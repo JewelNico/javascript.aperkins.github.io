@@ -1,0 +1,30 @@
+<html>
+
+<script>
+var userBrowser = navigator.appName;
+document.write("You are using" + " " + userBrowser + " " + "you will be forwarded to that page shortly.");
+
+function redirectURL(){
+
+if( userBrowser == "Chrome"){
+	location.href = "http://www.google.com";
+	}
+	else if(userBrowser == "Netscape") {
+	location.href = "http://www.firefox.com";
+	}
+	else if(userBrowser == "Microsoft Internet Explorer") {
+	location.href = "http://www.msn.com";
+	}
+	else if(userBrowser == "Opera") {
+	location.href = "http://www.opera.com"; 
+	}
+	else if(userBrowser == "Safari") {
+	location.href = " http://www.apple.com/startpage/";
+	}
+}
+
+
+setTimeout(redirectURL, 5000);		
+
+</script>
+</html>
